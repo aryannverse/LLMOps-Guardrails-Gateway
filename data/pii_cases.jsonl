@@ -1,0 +1,30 @@
+{"id": "x01", "text": "Contact me at priya.sharma@example.com", "expected": {"EMAIL": 1}}
+{"id": "x02", "text": "Send it to a.b-c_d+tag@mail.example.co.in and cc ops@example.org", "expected": {"EMAIL": 2}}
+{"id": "x03", "text": "My number is +91 98765 43210", "expected": {"PHONE": 1}}
+{"id": "x04", "text": "Call 9876543210 tomorrow", "expected": {"PHONE": 1}}
+{"id": "x05", "text": "US office: (555) 010-4477 or 555.010.9921", "expected": {"PHONE": 2}}
+{"id": "x06", "text": "London desk +44 20 7946 0958", "expected": {"PHONE": 1}}
+{"id": "x07", "text": "Visa test card 4111 1111 1111 1111", "expected": {"CREDIT_CARD": 1}}
+{"id": "x08", "text": "Mastercard 5500-0000-0000-0004 expires 12/29", "expected": {"CREDIT_CARD": 1}}
+{"id": "x09", "text": "Amex 3782 822463 10005", "expected": {"CREDIT_CARD": 1}}
+{"id": "x10", "text": "Card number 4012888888881881 on file", "expected": {"CREDIT_CARD": 1}}
+{"id": "x11", "text": "SSN 123-45-6789 for the test fixture", "expected": {"SSN": 1}}
+{"id": "x12", "text": "Aadhaar 2345 6789 0124 verified", "expected": {"AADHAAR": 1}}
+{"id": "x13", "text": "Aadhaar no. 491837265017", "expected": {"AADHAAR": 1}}
+{"id": "x14", "text": "PAN ABCPE1234F submitted", "expected": {"PAN": 1}}
+{"id": "x15", "text": "Rotate key gsk_ABCDEFGHIJKLMNOPQRSTUVWX1234 now", "expected": {"API_KEY": 1}}
+{"id": "x16", "text": "OPENAI_API_KEY=sk-proj-abcdefghijklmnopqrstuvwxyz012345", "expected": {"API_KEY": 1}}
+{"id": "x17", "text": "aws key AKIAIOSFODNN7EXAMPLE in config", "expected": {"API_KEY": 1}}
+{"id": "x18", "text": "token ghp_aBcDeFgHiJkLmNoPqRsTuVwXyZ0123456789", "expected": {"API_KEY": 1}}
+{"id": "x19", "text": "Ravi (ravi@example.com, +91 91234 56789) paid with 4111111111111111", "expected": {"EMAIL": 1, "PHONE": 1, "CREDIT_CARD": 1}}
+{"id": "x20", "text": "Employee: PAN ABCPE1234F, Aadhaar 7123 4567 8908, email hr@example.in", "expected": {"PAN": 1, "AADHAAR": 1, "EMAIL": 1}}
+{"id": "x21", "text": "In 2024 we sold 1500 units across 12 cities", "expected": {}}
+{"id": "x22", "text": "The release date is 2024-10-31 and the version is 3.11.4", "expected": {}}
+{"id": "x23", "text": "Order id 123456789012 shipped", "expected": {}}
+{"id": "x24", "text": "Invalid card 4111 1111 1111 1112 (fails Luhn)", "expected": {}}
+{"id": "x25", "text": "Room 101, floor 3, building 42", "expected": {}}
+{"id": "x26", "text": "The model has 184000000 parameters", "expected": {}}
+{"id": "x27", "text": "Use the @Override annotation in Java", "expected": {}}
+{"id": "x28", "text": "Pin code 302001 is Jaipur", "expected": {}}
+{"id": "x29", "text": "Invalid Aadhaar 2345 6789 0125", "expected": {}}
+{"id": "x30", "text": "Latency p95 was 48.2 ms over 10000 requests", "expected": {}}

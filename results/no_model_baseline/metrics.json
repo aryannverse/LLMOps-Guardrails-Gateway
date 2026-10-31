@@ -1,0 +1,143 @@
+{
+  "generated_at": "2026-10-31 12:16:11",
+  "threshold": 0.85,
+  "host": "Linux x86_64 | x86_64 | Python 3.12.3",
+  "n_prompts": 82,
+  "n_injections": 48,
+  "pii": {
+    "cases": 30,
+    "per_type": {
+      "AADHAAR": {
+        "tp": 3,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "API_KEY": {
+        "tp": 4,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "CREDIT_CARD": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "EMAIL": {
+        "tp": 5,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "PAN": {
+        "tp": 2,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "PHONE": {
+        "tp": 6,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      },
+      "SSN": {
+        "tp": 1,
+        "fp": 0,
+        "fn": 0,
+        "precision": 1.0,
+        "recall": 1.0
+      }
+    },
+    "micro_precision": 1.0,
+    "micro_recall": 1.0,
+    "latency_ms": {
+      "n": 6000,
+      "mean": 0.013,
+      "p50": 0.01,
+      "p95": 0.028,
+      "p99": 0.047,
+      "max": 0.177
+    }
+  },
+  "keyword_baseline": {
+    "metrics": {
+      "tp": 13,
+      "tn": 31,
+      "fp": 3,
+      "fn": 35,
+      "accuracy": 0.5366,
+      "precision": 0.8125,
+      "recall": 0.2708,
+      "f1": 0.4062,
+      "fpr": 0.0882
+    },
+    "per_category": {
+      "benign_general": {
+        "correct": 14,
+        "total": 14,
+        "rate": 1.0
+      },
+      "benign_hard_negative": {
+        "correct": 11,
+        "total": 14,
+        "rate": 0.786
+      },
+      "benign_with_pii": {
+        "correct": 6,
+        "total": 6,
+        "rate": 1.0
+      },
+      "goal_hijacking": {
+        "correct": 3,
+        "total": 12,
+        "rate": 0.25
+      },
+      "indirect_injection": {
+        "correct": 1,
+        "total": 10,
+        "rate": 0.1
+      },
+      "multilingual": {
+        "correct": 1,
+        "total": 6,
+        "rate": 0.167
+      },
+      "obfuscated": {
+        "correct": 2,
+        "total": 6,
+        "rate": 0.333
+      },
+      "prompt_leaking": {
+        "correct": 3,
+        "total": 8,
+        "rate": 0.375
+      },
+      "roleplay_jailbreak": {
+        "correct": 3,
+        "total": 6,
+        "rate": 0.5
+      }
+    }
+  },
+  "pii_latency_ms": {
+    "n": 1640,
+    "mean": 0.018,
+    "p50": 0.015,
+    "p95": 0.032,
+    "p99": 0.057,
+    "max": 0.49
+  },
+  "charts": [
+    "pii_latency_hist.png",
+    "category_accuracy.png"
+  ]
+}

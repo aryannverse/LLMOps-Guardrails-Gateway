@@ -1,0 +1,55 @@
+============================= test session starts ==============================
+platform linux -- Python 3.12.3, pytest-9.2.0, pluggy-1.7.0 -- /usr/bin/python3
+cachedir: .pytest_cache
+rootdir: llmops-guardrail-gateway
+configfile: pytest.ini
+testpaths: tests
+plugins: anyio-4.15.1
+collecting ... collected 44 items
+
+tests/test_dashboard.py::test_dashboard_renders_metrics_from_telemetry PASSED [  2%]
+tests/test_gateway.py::test_benign_prompt_is_redacted_and_forwarded PASSED [  4%]
+tests/test_gateway.py::test_direct_injection_blocked_with_403 PASSED     [  6%]
+tests/test_gateway.py::test_indirect_injection_in_context_is_blocked PASSED [  9%]
+tests/test_gateway.py::test_guardrail_failure_fails_closed PASSED        [ 11%]
+tests/test_gateway.py::test_llm_failure_returns_502_and_is_logged PASSED [ 13%]
+tests/test_gateway.py::test_input_validation PASSED                      [ 15%]
+tests/test_gateway.py::test_audit_chain_intact_after_traffic PASSED      [ 18%]
+tests/test_pii.py::test_labelled_pii_cases[x01] PASSED                   [ 20%]
+tests/test_pii.py::test_labelled_pii_cases[x02] PASSED                   [ 22%]
+tests/test_pii.py::test_labelled_pii_cases[x03] PASSED                   [ 25%]
+tests/test_pii.py::test_labelled_pii_cases[x04] PASSED                   [ 27%]
+tests/test_pii.py::test_labelled_pii_cases[x05] PASSED                   [ 29%]
+tests/test_pii.py::test_labelled_pii_cases[x06] PASSED                   [ 31%]
+tests/test_pii.py::test_labelled_pii_cases[x07] PASSED                   [ 34%]
+tests/test_pii.py::test_labelled_pii_cases[x08] PASSED                   [ 36%]
+tests/test_pii.py::test_labelled_pii_cases[x09] PASSED                   [ 38%]
+tests/test_pii.py::test_labelled_pii_cases[x10] PASSED                   [ 40%]
+tests/test_pii.py::test_labelled_pii_cases[x11] PASSED                   [ 43%]
+tests/test_pii.py::test_labelled_pii_cases[x12] PASSED                   [ 45%]
+tests/test_pii.py::test_labelled_pii_cases[x13] PASSED                   [ 47%]
+tests/test_pii.py::test_labelled_pii_cases[x14] PASSED                   [ 50%]
+tests/test_pii.py::test_labelled_pii_cases[x15] PASSED                   [ 52%]
+tests/test_pii.py::test_labelled_pii_cases[x16] PASSED                   [ 54%]
+tests/test_pii.py::test_labelled_pii_cases[x17] PASSED                   [ 56%]
+tests/test_pii.py::test_labelled_pii_cases[x18] PASSED                   [ 59%]
+tests/test_pii.py::test_labelled_pii_cases[x19] PASSED                   [ 61%]
+tests/test_pii.py::test_labelled_pii_cases[x20] PASSED                   [ 63%]
+tests/test_pii.py::test_labelled_pii_cases[x21] PASSED                   [ 65%]
+tests/test_pii.py::test_labelled_pii_cases[x22] PASSED                   [ 68%]
+tests/test_pii.py::test_labelled_pii_cases[x23] PASSED                   [ 70%]
+tests/test_pii.py::test_labelled_pii_cases[x24] PASSED                   [ 72%]
+tests/test_pii.py::test_labelled_pii_cases[x25] PASSED                   [ 75%]
+tests/test_pii.py::test_labelled_pii_cases[x26] PASSED                   [ 77%]
+tests/test_pii.py::test_labelled_pii_cases[x27] PASSED                   [ 79%]
+tests/test_pii.py::test_labelled_pii_cases[x28] PASSED                   [ 81%]
+tests/test_pii.py::test_labelled_pii_cases[x29] PASSED                   [ 84%]
+tests/test_pii.py::test_labelled_pii_cases[x30] PASSED                   [ 86%]
+tests/test_pii.py::test_placeholders_replace_values PASSED               [ 88%]
+tests/test_pii.py::test_checksums PASSED                                 [ 90%]
+tests/test_pii.py::test_benign_text_untouched PASSED                     [ 93%]
+tests/test_telemetry.py::test_chain_verifies_and_resumes PASSED          [ 95%]
+tests/test_telemetry.py::test_tampering_is_detected PASSED               [ 97%]
+tests/test_telemetry.py::test_deleted_record_is_detected PASSED          [100%]
+
+============================== 44 passed in 1.86s ==============================

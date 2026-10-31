@@ -1,0 +1,19 @@
+name: ci
+on: [push, pull_request]
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      # Unit + integration tests use fakes for DeBERTa and Groq, so CI needs no torch and no API key.
+      - run: pip install fastapi uvicorn pydantic python-dotenv groq streamlit pandas altair httpx matplotlib pytest
+      - run: pytest -q
+      # Regression gate for the deterministic layer: PII engine + keyword baseline metrics.
+      - run: python scripts/evaluate.py --no-model --out results/ci
+      - uses: actions/upload-artifact@v4
+        with:
+          name: eval-results
+          path: results/ci

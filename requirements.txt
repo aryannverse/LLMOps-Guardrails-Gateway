@@ -1,0 +1,19 @@
+# --- Gateway: FastAPI + Groq (Stage 1 PII engine needs only the standard library) ---
+fastapi>=0.110
+uvicorn[standard]>=0.29
+pydantic>=2.6
+python-dotenv>=1.0
+groq>=1.0
+# --- Stage 2 guardrail model on CPU (see README for the smaller CPU-only torch wheel) ---
+torch>=2.2
+transformers>=4.44,<5
+sentencepiece>=0.2
+protobuf>=4.25
+# --- Stage 3 dashboard ---
+streamlit>=1.50
+pandas>=2.0
+altair>=5.0
+# --- Scripts and tests ---
+httpx>=0.27
+matplotlib>=3.8
+pytest>=8.0
